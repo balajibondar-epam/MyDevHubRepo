@@ -1,0 +1,132 @@
+<template>
+    <lightning-card title="Visual Pickers">
+        <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="6" padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <lightning-card title="Single select non coverable">
+                            <template for:each={items1} for:item="item">
+                                <div class={item.pickerSize} key={item.idx}>
+                                    <input type="radio" id={item.idx} value={item.label} name="set1"
+                                        onchange={handleSet1Change} disabled={item.disabled} />
+                                    <label for={item.idx}>
+                                        <span
+                                            class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                                            <span>
+                                                <lightning-icon icon-name={item.icon} alternative-text="Event"
+                                                    size="large"></lightning-icon>
+                                            </span>
+                                        </span>
+                                        <lightning-icon variant="inverse"
+                                            class="slds-icon_container slds-visual-picker__text-check"
+                                            icon-name="utility:check" alternative-text="check" size="x-small"
+                                            title="small size"></lightning-icon>
+                                        <span class="slds-visual-picker__body">
+                                            <span class="slds-text-title">{item.label}</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </template>
+                            <p slot="footer">Selected : {set1Selected}</p>
+                        </lightning-card>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <lightning-card title="Multi select non coverable">
+                            <template for:each={items2} for:item="item">
+                                <div class={item.pickerSize} key={item.idx}>
+                                    <input type="checkbox" id={item.idx} value={item.label} name="set2"
+                                        onchange={handleSet2Change} disabled={item.disabled} />
+                                    <label for={item.idx}>
+                                        <span
+                                            class="slds-visual-picker__figure slds-visual-picker__text slds-align_absolute-center">
+                                            <span>
+                                                <lightning-icon icon-name={item.icon} alternative-text="Event"
+                                                    size="large"></lightning-icon>
+                                            </span>
+                                        </span>
+                                        <lightning-icon variant="inverse"
+                                            class="slds-icon_container slds-visual-picker__text-check"
+                                            icon-name="utility:check" alternative-text="check" size="x-small"
+                                            title="small size"></lightning-icon>
+                                        <span class="slds-visual-picker__body">
+                                            <span class="slds-text-title">{item.label}</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </template>
+                            <p slot="footer">Selected : {set2Selected}</p>
+                        </lightning-card>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <lightning-card title="Single select coverable">
+                            <template for:each={items3} for:item="item">
+                                <div class={item.pickerSize} key={item.idx}>
+                                    <input type="radio" id={item.idx} value={item.label} name="set3"
+                                        onchange={handleSet3Change} disabled={item.disabled} />
+                                    <label for={item.idx}>
+                                        <span
+                                            class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+                                            <span class="slds-is-selected">
+                                                <span class="slds-icon_container">
+                                                    <lightning-icon icon-name="action:check" alternative-text="check"
+                                                        size="large"></lightning-icon>
+                                                </span>
+                                            </span>
+                                            <span class="slds-is-not-selected">
+                                                <span class="slds-icon_container">
+                                                    <lightning-icon icon-name={item.icon} alternative-text="Event"
+                                                        size="large"></lightning-icon>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-visual-picker__body">
+                                            <span class="slds-text-title">{item.label}</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </template>
+                            <p slot="footer">Selected : {set3Selected}</p>
+                        </lightning-card>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <lightning-card title="Multi select coverable">
+                            <template for:each={items4} for:item="item">
+                                <div class={item.pickerSize} key={item.idx}>
+                                    <input type="checkbox" id={item.idx} value={item.label} name="set4"
+                                        onchange={handleSet4Change} disabled={item.disabled} />
+                                    <label for={item.idx}>
+                                        <span
+                                            class="slds-visual-picker__figure slds-visual-picker__icon slds-align_absolute-center">
+                                            <span class="slds-is-selected">
+                                                <span class="slds-icon_container">
+                                                    <lightning-icon icon-name="action:check" alternative-text="check"
+                                                        size="large"></lightning-icon>
+                                                </span>
+                                            </span>
+                                            <span class="slds-is-not-selected">
+                                                <span class="slds-icon_container">
+                                                    <lightning-icon icon-name={item.icon} alternative-text="Event"
+                                                        size="large"></lightning-icon>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="slds-visual-picker__body">
+                                            <span class="slds-text-title">{item.label}</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </template>
+                            <p slot="footer">Selected : {set4Selected}</p>
+                        </lightning-card>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

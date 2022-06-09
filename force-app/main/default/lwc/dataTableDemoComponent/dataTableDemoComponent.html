@@ -1,0 +1,35 @@
+<template>
+    <lightning-card variant="Narrow" title="DataTable Demo" icon-name="standard:account">
+        <div slot="actions">
+            <lightning-layout horizontal-align="space">
+                <lightning-layout-item padding="around-small">
+                    <!--<lightning-button label="New"></lightning-button>-->
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <lightning-input data-id="toggle1" type="toggle" label="Show/Hide DataTable"
+                        onchange={handleToggleDataTable}>
+                    </lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <p class="slds-p-horizontal_small">
+            <template if:true={showdatatable}>
+                <div style="height: 300px;">
+                    <lightning-datatable key-field="name" data={data} columns={columns}>
+                    </lightning-datatable>
+                </div>
+
+            </template>
+            <template if:false={showdatatable}>
+                <div class="slds-illustration slds-illustration_large" aria-hidden="true">
+                    <img src="/img/chatter/Desert.svg" class="slds-illustration__svg" alt="" />
+                    <div class="slds-text-color_weak">
+                        <h3 class="slds-text-heading_medium">No data found</h3>
+                    </div>
+                </div>
+
+            </template>
+        </p>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

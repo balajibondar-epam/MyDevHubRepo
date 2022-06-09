@@ -1,0 +1,12 @@
+<template>
+    <lightning-card variant="Narrow" title="Design Attrubutes" icon-name="standard:account">
+        <p class="slds-p-horizontal_small">
+            <lightning-progress-indicator current-step={currentStep} type={type} variant={variant}>
+                <template for:each={steps} for:item="step">
+                    <lightning-progress-step label={step.label} value={step.value} key={step.label}>
+                    </lightning-progress-step>
+                </template>
+            </lightning-progress-indicator>
+        </p>
+    </lightning-card>
+</template>

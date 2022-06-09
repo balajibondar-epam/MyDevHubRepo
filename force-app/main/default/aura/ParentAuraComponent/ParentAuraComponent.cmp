@@ -1,0 +1,33 @@
+<!--
+@description       : 
+@author            : Balaji.Bondar
+@group             : 
+@last modified on  : 11-20-2021
+@last modified by  : BalajiBondar@gmail.com
+-->
+<aura:component controller="ParentAuraController"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+    access="global">
+    <aura:attribute name="FirstNumber" type="Integer" default="1" />
+    <aura:attribute name="SecondNumber" type="Integer" default="2" />
+    <aura:attribute name="Total" type="Integer" default="0" />
+    <aura:attribute name="accountList" type="List" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:card title="Parent Aura Component" iconName="standard:account" footer="Footer">
+        <aura:set attribute="actions">
+            <lightning:button label="Save" title="Save" onclick="{! c.saveBtnClick }" />
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <lightning:input type="Integer" name="FirstNumber" label="First Number" value="{!v.FirstNumber}"
+                pattern="[0-9]*" />
+            <lightning:input type="Integer" name="SecondNumber" label="Second Number" value="{!v.SecondNumber}"
+                pattern="[0-9]*" />
+            <lightning:input type="Integer" name="Total" label="Total" value="{!v.Total}" disabled="true" />
+            <lightning:button label="Server Call" title="ServerCall" onclick="{!c.handleServerRequest}">
+            </lightning:button>
+        </p>
+        {!v.accountList}
+    </lightning:card>
+</aura:component>

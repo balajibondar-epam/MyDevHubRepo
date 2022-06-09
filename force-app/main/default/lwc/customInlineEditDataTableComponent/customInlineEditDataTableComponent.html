@@ -1,0 +1,16 @@
+<!--customInlineEditDataTableComponent.html-->
+<template>
+    <lightning-card variant="Narrow" title="Custom Inline Edit DataTable">
+        <!--<lightning-button-icon icon-name="utility:down" variant="border-filled" alternative-text="Show More"
+            slot="actions"></lightning-button-icon>-->
+        <p class="slds-p-horizontal_small">
+            <lightning-datatable key-field="id" data={accountList} columns={columnsList} onsave={handleSaveClick}
+                hide-checkbox-column draft-values={selectedRowIdList}>
+            </lightning-datatable>
+
+        </p>
+        <!--<p slot="footer">Card Footer</p>-->
+    </lightning-card>
+
+
+</template>

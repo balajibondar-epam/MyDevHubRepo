@@ -1,0 +1,33 @@
+<!--asynchronousJavaScriptComponent.html-->
+<template>
+    <lightning-card title="Asynchronous javascript">
+        <p class="slds-p-horizontal_small">
+            <lightning-tabset variant="standard" active-tab-value="one">
+                <lightning-tab label="Callback" value="one">
+                    <lightning-button variant="brand" label="Callback" title="callback" onclick={handleCallback}
+                        class="slds-m-left_x-small"></lightning-button>
+                    <!-- variant available (Neutral (Default), Base, Brand, Brand Outline, Destructive, Destructive Text, Success, inverse) -->
+
+                </lightning-tab>
+                <lightning-tab label="Promises" value="two">
+                    <lightning-button variant="brand" label="Promise" title="promise" onclick={handlePromise}
+                        class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Promise Apex" title="promiseapex"
+                        onclick={handlePromiseApex} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Promise Chain" title="promisehain"
+                        onclick={handlePromiseChain} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Promise All" title="promiseall" onclick={handlePromiseAll}
+                        class="slds-m-left_x-small"></lightning-button>
+
+                </lightning-tab>
+                <lightning-tab label="Async/Await" value="three">
+                    <lightning-button variant="brand" label="Async/Await" title="asyncawait" onclick={handleAsynchAwait}
+                        class="slds-m-left_x-small"></lightning-button>
+                </lightning-tab>
+            </lightning-tabset>
+
+        </p>
+    </lightning-card>
+
+
+</template>

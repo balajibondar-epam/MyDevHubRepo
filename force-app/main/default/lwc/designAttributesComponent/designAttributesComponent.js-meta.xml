@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <!--<target>lightning__Tab</target>-->
+        <!--<target>lightning__RecordAction</target>-->
+        <!--<target>lightning__Inbox</target>-->
+        <!--<target>lightning__UtilityBar</target>-->
+        <!--<target>lightning__FlowScreen</target>-->
+        <!--<target>lightningSnapin__ChatMessage</target>-->
+        <!--<target>lightningSnapin__Minimized</target>-->
+        <!--<target>lightningSnapin__PreChat</target>-->
+        <!--<target>lightningSnapin__ChatHeader</target>-->
+        <!--<target>lightningCommunity__Page</target>-->
+        <!--<target>lightningCommunity__Default</target>-->
+        <!--<target>lightningCommunity__Page_Layout</target>-->
+        <!--<target>lightningCommunity__Theme_Layout</target>-->
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+            <property name="currentStep" type="String" datasource="step-1,step-2,step-3,step-4,step-5" />
+            <property name="type" type="String" datasource="base,path" />
+            <property name="variant" type="String" datasource="base,shaded" />
+            <!--
+            <objects>
+                <object>Account</object>
+                <object>Contact</object>
+                <object>Opportunity</object>
+            </objects>
+            -->
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Refresh Component/Standard Page">
+        <!--<lightning-button label="New" slot="actions"></lightning-button>-->
+        <p class="slds-p-horizontal_small">
+            <lightning-input data-id="username" type="text" name="username" label="Enter Name"
+                class="slds-p-around_xx-small">
+            </lightning-input>
+            <lightning-button variant="default" label="Save & Soft Refresh Account" title="refreshcomponent"
+                onclick={handleRefreshComponent} class="slds-p-around_xx-small">
+            </lightning-button>
+            <lightning-button variant="default" label="Save & Hard Refresh Account" title="refreshandsaveaccount"
+                onclick={handleRefreshandSaveAccount} class="slds-p-around_xx-small">
+            </lightning-button>
+        </p>
+        <p slot="footer">
+            <template if:true={updatedaccountrecord}>
+                updatedaccountrecord: {updatedaccountrecord.Name}
+            </template>
+        </p>
+    </lightning-card>
+
+</template>

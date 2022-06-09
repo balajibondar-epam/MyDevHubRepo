@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="@Track Array Example">
+        <lightning-button label="Change Account Option" slot="actions" onclick={handleChangeOptionBtnClick}
+            disabled={changeAccountOptionPressFlag}>
+        </lightning-button>
+        <p class="slds-p-horizontal_small">
+            <lightning-combobox name="selectAccountStatus" label="Select Account Status" value={selectedOption}
+                placeholder="--SelectOption--" options={optionList} onchange={handleOptionChange}>
+            </lightning-combobox>
+        </p>
+        <p class="slds-p-horizontal_small">
+            <lightning-input name="selectedAccountStatus" label="selected Account Status" value={selectedOption}
+                disabled="true"></lightning-input>
+        </p>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,10 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Parent Component">
+        <lightning-button label="New" slot="actions" onclick={handleClick}></lightning-button>
+        <p class="slds-p-horizontal_small">
+            <c-custom-child-component onprocessquoteinformation={handleQuoteProcessing}></c-custom-child-component>
+        </p>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

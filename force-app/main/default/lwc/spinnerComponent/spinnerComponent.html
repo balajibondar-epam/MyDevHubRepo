@@ -1,0 +1,20 @@
+<template>
+    <lightning-card variant="narrow" icon-name="standard:account">
+        <h1 slot="title">Spinner Component</h1>
+        <div class="slds-p-horizontal_small">
+            <div class="slds-m-around_large">
+                <p if:true={isLoaded}>Content has been loaded.</p>
+                <div if:false={isLoaded} class="slds-is-relative">
+                    <lightning-spinner alternative-text="Loading..." variant="brand">
+                    </lightning-spinner>
+                </div>
+            </div>
+        </div>
+        <div slot="actions">
+            <lightning-button label="Toggle" slot="actions" onclick={handleClick}></lightning-button>
+        </div>
+        <div slot="footer">
+            <p>Card Footer</p>
+        </div>
+    </lightning-card>
+</template>

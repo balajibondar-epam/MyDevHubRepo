@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Apex Call Demo">
+        <!--<lightning-button label="New" slot="actions"></lightning-button>-->
+        <p class="slds-p-horizontal_small">
+            <lightning-tabset variant="standard" active-tab-value="one">
+                <lightning-tab label="Imperative Call" value="one">
+                    <lightning-button variant="default" label="Apex Imperative Call" title="ApexImperativeCall"
+                        onclick={handleApexImperativeCall}></lightning-button>
+                    <template if:true={contacts}>
+                        <ul class="slds-has-dividers_bottom-space">
+                            <template for:each={contacts} for:item="contact">
+                                <!-- <p key={contact.Id}>{contact.Name}</p>-->
+                                <li class="slds-item" key={contact.Id}>
+                                    <div class="slds-p-around_xx-small lgc-bg">
+                                        <lightning-tile label={contact.Name} type="media">
+                                            <lightning-icon slot="media" icon-name="standard:contact"></lightning-icon>
+                                            <!--<p class="slds-truncate" title="7 Members">{contact.Id}</p>-->
+                                            <ul class="slds-list_horizontal slds-has-dividers_right">
+                                                <li class="slds-item">{contact.Id}</li>
+                                                <li class="slds-item">{contact.Email}</li>
+                                            </ul>
+                                        </lightning-tile>
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                </lightning-tab>
+                <lightning-tab label="@wire Decotator" value="two">
+                    tab two content
+                </lightning-tab>
+            </lightning-tabset>
+        </p>
+        <!--<p slot="footer">No past activity. Past meetings and tasks marked as done show up here.</p>-->
+    </lightning-card>
+</template>

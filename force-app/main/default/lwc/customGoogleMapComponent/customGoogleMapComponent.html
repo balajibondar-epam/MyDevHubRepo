@@ -1,0 +1,12 @@
+<template>
+    <lightning-card variant="Narrow" title="Google Map Component" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning-input name="firstName" label="From Location"></lightning-input>
+            <lightning-input name="firstName" label="To Location"></lightning-input>
+            <lightning-map map-markers={mapMarkers} markers-title={markersTitle} center={center}
+                class="slds-m-top_x-small">
+            </lightning-map>
+        </div>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

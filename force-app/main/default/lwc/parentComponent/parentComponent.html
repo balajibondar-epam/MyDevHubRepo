@@ -1,0 +1,22 @@
+<template>
+    <lightning-card variant="narrow" icon-name="standard:account">
+        <h1 slot="title">Parent Component</h1>
+        <p class="slds-p-horizontal_small">
+            This is body. You can have your content here
+            childcompnentvalue : {childcompnentvalue}
+            <!--<c-child-component></c-child-component>-->
+            <template if:true={contactList} for:each={contactList} for:item="contact" for:index="index">
+                <li key={contact.Id}>
+                    {contact.Name}
+                    {contact.Title}
+                </li>
+            </template>
+        </p>
+        <div slot="actions">
+            <lightning-button label="New" slot="actions" onclick={handleClick}></lightning-button>
+        </div>
+        <div slot="footer">
+            <p>Card Footer</p>
+        </div>
+    </lightning-card>
+</template>
