@@ -1,6 +1,5 @@
 /* eslint-disable @lwc/lwc/no-async-operation */
 /* eslint-disable no-console */
-//updatd test LWC component
 import { LightningElement, track, api } from "lwc";
 
 export default class AddressInput extends LightningElement {
