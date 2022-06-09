@@ -1,7 +1,7 @@
 /**
  * Abstract class for all transaction service classes,
  * contains common methods for all service classes
- * added comment to class
+ * added comment
  * Every service class should extend the AbstractTransactionService
  */
 public abstract class AbstractTransactionService {
